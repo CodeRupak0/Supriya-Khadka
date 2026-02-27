@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Supriya Khadka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Your Blog Website">
+    <meta property="og:description" content="Read my thoughts and stories">
+    <meta property="og:image" content="images/blog1.jpg">
+    <meta property="og:type" content="article">
+
+    <link rel="icon" type="image/png" sizes="128x128" href="images/logo.png">
+    <link rel="shortcut icon" href="images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="about-section">
+        <div class="left-section">
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div id= "about" class="about-content">
+                <p class="small-title">Attorney, Government of Nepal</p>
+                <h1 class="name">Adv. Supriya Khadka</h1>
+                <p class="description">
+                    Hi, I am Adv. Supriya Khadka, an attorney at
+                    the Government of Nepal, committed to justice advocacy,
+                    legal research, and professional legal service with integrity
+                    and dedication. I specialize in applying legal knowledge to
+                    practical public service challenges while maintaining strong
+                    ethical and professional standards. I am deeply interested in
+                    criminology, legal research, and strengthening access to
+                    justice through analytical thinking, continuous learning,
+                    and professional legal practice.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="right-section">
+            <img src="images/profile.jpg" alt="Portrait">
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+            <p class="portfolio-subheading">Know Me Better</p>
+            <h1 class="portfolio-heading">Brief Overview</h1>
+
+            <div class="portfolio-container">
+
+                <!-- Left Side Menu -->
+                <div class="portfolio-menu">
+
+                    <div class="menu-item active" onclick="showContent('education')">
+                        Education
+                    </div>
+
+                    <div class="menu-item" onclick="showContent('experience')">
+                        Experience
+                    </div>
+
+                    <div class="menu-item" onclick="showContent('research')">
+                        Research
+                    </div>
+
+                    <div class="menu-item" onclick="showContent('involvement')">
+                        Involvement
+                    </div>
+
+                </div>
+
+                <!-- Right Side Content -->
+                <div class="portfolio-content">
+
+                    <div id="education" class="content-box active">
+                        <div class="education-card">
+                            <h3>L.L.M in Criminology</h3>
+                            <p class="edu-institute">Kathmandu School of Law (KSL), Purbanchal University, Nepal</p>
+                            <p class="edu-honors">
+                                <strong>Honors: </strong> 2nd Topper of KSL
+                            </p>
+                            <p class="edu-year">2024 - 2026</p>
+                        </div>
+
+                        <div class="education-card">
+                            <h3>B.A B.L.L.B </h3>
+                            <p class="edu-institute">Kathmandu School of Law (KSL), Purbanchal University, Nepal</p>
+                            <p class="edu-honors">
+                                <strong>Honors: </strong> 3rd Topper for 3rd, 4th and 5th year
+                            </p>
+                            <p class="edu-year">2019 - 2024</p>
+                        </div>
+                    </div>
+
+                    <div id="experience" class="content-box">
+                        <div class="experience-card">
+                            <h3>Research and Teaching Assistant (RA/TA)</h3>
+                            <p class="exp-institute">Kathmandu School of Law (KSL), Purbanchal University, Nepal | 2024 - 2026</p>
+                            <p class="exp-description">
+                                <strong>Works: </strong>Delivered lecture on various subjects and assisted in
+                                teaching learning works and also conducted independent research.
+                            </p>
+                        </div>
+
+                        <div class="experience-card">
+                            <h3>Legal Intern </h3>
+                            <p class="exp-institute">Patan High Court, Lalitpur, Nepal | Aug 2023 - Jan 2024</p>
+                            <p class="exp-institute">The Office of Attorney General, Kathmandu, Nepal | Aug 2022 - Dec 2022</p>
+                            <p class="exp-institute">Supreme Court of Nepal, Kathmandu | Aug 2020 - Dec 2021</p>
+                        </div>
+
+                    </div>
+
+                    <div id="research" class="content-box">
+                        <div class="research-card">
+                            <h4>Jail system in Nepal: A case Study</h4>
+                            <p class="res-journal">Journal of Legal Studies</p>
+                        </div>
+                    </div>
+
+                    <div id="involvement" class="content-box">
+                        <div class="involvement-card">
+                            <h4>Rotaract Club of Dillibazar, Kathmandu</h4>
+                            <p class="inv-position">Vice President | 2024 - Present</p>
+                            <p class="inv-position">Club Service Director | 2022 - 2024</p>
+                        </div>
+                        <div class="involvement-card">
+                            <h4>Moot Court Trial</h4>
+                            <p class="inv-position">Legal Advocate | 2024 - Present</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+    </section>
+
+
+<!-- ================= BLOG SECTION ================= -->
+<section id="blog" class="blog-section">
+  <p class="blog-subheading">Scribbles</p>
+  <h1 class="blog-heading">Between Thoughts and Words</h1>
+
+  <div class="blog-container">
+
+    <!-- ================= FEATURED HORIZONTAL BLOG ================= -->
+    <div class="blog-card horizontal" onclick="openBlog('blog1')">
+      <div class="blog-img-wrapper hz-img">
+        <img src="images/profile.jpg" class="blog-img-hz">
+        <div class="hover-overlay">
+          <div class="read-btn">View full article</div>
+        </div>
+      </div>
+      <div class="blog-content" id="featured-content">
+        <h2 id="featured-title"></h2>
+        <p class="blog-date" id="featured-date"></p>
+        <p class="blog-text" id="featured-text"></p>
+        <p class="blog-author" id="featured-author"></p>
+      </div>
+    </div>
+
+    <!-- ================= 3 COLUMN VERTICAL BLOG GRID ================= -->
+    <div class="blog-grid">
+
+      <div class="blog-card" onclick="openBlog('blog2')">
+        <div class="blog-img-wrapper">
+          <img src="images/blog2.jpg">
+          <div class="hover-overlay"><div class="read-btn">View full article</div></div>
+        </div>
+        <div class="blog-content">
+          <h3 id="card2-title"></h3>
+          <p class="blog-date" id="card2-date"></p>
+          <p class="blog-text" id="card2-text"></p>
+          <p class="blog-author"></p>
+        </div>
+      </div>
+
+      <div class="blog-card" onclick="openBlog('blog3')">
+        <div class="blog-img-wrapper">
+          <img src="images/blog3.jpg">
+          <div class="hover-overlay"><div class="read-btn">View full article</div></div>
+        </div>
+        <div class="blog-content">
+          <h3 id="card3-title"></h3>
+          <p class="blog-date" id="card3-date"></p>
+          <p class="blog-text" id="card3-text"></p>
+          <p class="blog-author">— </p>
+        </div>
+      </div>
+
+      <!-- Hidden blogs (add more as needed) -->
+      <div class="blog-card hidden-blog" onclick="openBlog('blog5')">
+        <!-- Hidden blogs (add content here as needed) -->
+      </div>
+    </div>
+  </div>
+    <div class="show-more-wrapper">
+        <button class="show-more-btn" id="show-more-btn" onclick="toggleMoreBlogs()">
+            Show More Blogs
+        </button>
+      </div>
+</section>
+
+<!-- ================= FULLSCREEN BLOG MODAL ================= -->
+<div id="blog-modal" class="blog-modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeBlog()">Close</span>
+    <img id="modal-img" src="" alt="">
+    <h2 id="modal-title"></h2>
+    <p id="modal-date"></p>
+    <div id="modal-text"></div>
+    <p id="modal-author"></p>
+
+  </div>
+</div>
+
+
+    <!-- CONTACT -->
+    <div id="contact" class="section contact-section">
+        <p class="contact-subheading">Lets Connect!!</p>
+        <h1 class="contact-heading">Share Me Your Thoughts</h1>
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <input type="text" name="name" id="name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" id="email" placeholder="Your email" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" id="message" rows="7" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn-send">Send Message</button>
+            <div id="contact-message" style="display:none; margin-top: 10px;"></div>
+        </form>
+    </div>
+
+    <footer class="custom-footer">
+
+        <div class="footer-container">
+
+            <!-- Left Column -->
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <div class="logo-balance">
+                        <i class="fas fa-scale-balanced"></i>
+                    </div>
+                    <h3>Supriya Khadka</h3>
+                </div>
+
+                <p class="footer-description">
+                    Attorney at Government of Nepal, Legal Advisor, Justice Advocate
+                    and Legal Researcher
+                </p>
+
+                <p class="footer-info">
+                    <i class="fa fa-envelope"></i> supriyakhadka17@gmail.com
+                </p>
+
+                <p class="footer-info">
+                    <i class="fa fa-map-marker-alt"></i> Bhaktapur, Nepal
+                </p>
+            </div>
+
+            <!-- Middle Column -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Column -->
+            <div class="footer-col">
+                <h4>Connect With Me</h4>
+                <p>Follow for updates and development.</p>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/supriya.khadka.75" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/i__supriyaa/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/supriya-khadka-110619271/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Supriya Khadka. All rights reserved.</p>
+            <p>Built with ❤️ by Rupak Khadka.</p>
+        </div>
+
+    </footer>
+
+<!-- ================= BLOG JS ================= -->
+
+<script>
+// ─── CONFIG: map each blog ID to its .txt file and image ───────────────────────
+const blogFiles = {
+  blog1: { txt: 'blog/blog1.txt', img: 'images/profile.jpg' },
+  blog2: { txt: 'blog/blog2.txt', img: 'images/blog2.jpg' },
+  blog3: { txt: 'blog/blog3.txt', img: 'images/blog3.jpg' },
+  blog4: { txt: 'blog/blog4.txt', img: 'images/blog4.jpg' },
+  blog5: { txt: 'blog/blog5.txt', img: 'images/blog5.jpg' },
+};
+
+// ─── PARSE TXT ────────────────────────────────────────────────────────────────
+async function parseTxt(id) {
+  const file = blogFiles[id];
+  if (!file) return null;
+  try {
+    const res = await fetch(file.txt);
+    if (!res.ok) return null;
+    const raw = await res.text();
+
+    const get = (key) => {
+      const regex = new RegExp(`^${key}\\s*:\\s*(.+)`, 'im');
+      const match = raw.match(regex);
+      return match ? match[1].trim() : '';
+    };
+
+    const contentMatch = raw.match(/^Content\s*:\s*([\s\S]*)/im);
+    const body = contentMatch ? contentMatch[1].trim() : '';
+
+    return {
+      title:  get('Title'),
+      date:   get('Date'),
+      author: get('Author'),
+      body,
+      img: file.img
+    };
+  } catch { return null; }
+}
+
+// ─── CARD MAP ─────────────────────────────────────────────────────────────────
+const cardMap = {
+  blog1: { title: 'featured-title', date: 'featured-date', text: 'featured-text', author: 'featured-author' },
+  blog2: { title: 'card2-title',    date: 'card2-date',    text: 'card2-text' },
+  blog3: { title: 'card3-title',    date: 'card3-date',    text: 'card3-text' },
+  blog4: { title: 'card4-title',    date: 'card4-date',    text: 'card4-text' },
+  blog5: { title: 'card5-title',    date: 'card5-date',    text: 'card5-text' },
+};
+
+async function populateCards() {
+  for (const [id, ids] of Object.entries(cardMap)) {
+    const data = await parseTxt(id);
+    if (!data) continue;
+    if (ids.title  && document.getElementById(ids.title))  document.getElementById(ids.title).textContent  = data.title;
+    if (ids.date   && document.getElementById(ids.date))   document.getElementById(ids.date).textContent   = data.date;
+    if (ids.author && document.getElementById(ids.author)) document.getElementById(ids.author).textContent = data.author;
+    if (ids.text   && document.getElementById(ids.text)) {
+      document.getElementById(ids.text).textContent = data.body.slice(0, 200) + (data.body.length > 200 ? '…' : '');
+    }
+  }
+}
+
+// ─── OPEN BLOG MODAL ─────────────────────────────────────────────────────────
+async function openBlog(id) {
+  id = id.replace(/\.txt$/, '');
+  const data = await parseTxt(id);
+  if (!data) { console.warn('Blog not found:', id); return; }
+
+  document.getElementById('modal-img').src            = data.img;
+  document.getElementById('modal-img').alt            = data.title;
+  document.getElementById('modal-title').textContent  = data.title;
+  document.getElementById('modal-date').textContent   = data.date;
+  document.getElementById('modal-author').textContent = data.author;
+
+  const textEl = document.getElementById('modal-text');
+  textEl.innerHTML = data.body
+    .split(/\n\n+/)
+    .map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`)
+    .join('');
+
+  history.pushState({ blog: id }, '', `?blog=${id}`);
+  document.getElementById('blog-modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeBlog() {
+  document.getElementById('blog-modal').style.display = 'none';
+  document.body.style.overflow = '';
+  history.pushState({}, '', window.location.pathname);
+}
+
+// ─── SHARE LINK ──────────────────────────────────────────────────────────────
+function shareBlog() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const el = document.getElementById('share-confirm');
+    el.style.display = 'inline';
+    setTimeout(() => el.style.display = 'none', 2500);
+  });
+}
+
+// ─── SHOW MORE / SHOW LESS TOGGLE ────────────────────────────────────────────
+let moreShown = false;
+function toggleMoreBlogs() {
+  const hidden = document.querySelectorAll('.hidden-blog');
+  const btn    = document.getElementById('show-more-btn');
+  moreShown = !moreShown;
+  hidden.forEach(el => el.style.display = moreShown ? 'flex' : 'none');
+  btn.textContent = moreShown ? 'Show Less Blogs' : 'Show More Blogs';
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+  populateCards();
+  const params = new URLSearchParams(window.location.search);
+  const blogId = params.get('blog');
+  if (blogId) openBlog(blogId);
+});
+
+document.getElementById('blog-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeBlog();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeBlog();
+});
+
+</script>
+
+    <script>
+    function showContent(sectionId){
+
+        // Hide all content boxes
+        document.querySelectorAll(".content-box").forEach(box=>{
+            box.classList.remove("active");
+        });
+
+        // Remove active from menu
+        document.querySelectorAll(".menu-item").forEach(item=>{
+            item.classList.remove("active");
+        });
+
+        // Show selected content
+        document.getElementById(sectionId).classList.add("active");
+
+        // Highlight clicked menu
+        event.target.classList.add("active");
+    }
+    </script>
+
+    <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        // Replace with your backend endpoint if any
+        console.log("Form submitted:", Object.fromEntries(formData.entries()));
+        const msgDiv = document.getElementById("contact-message");
+        msgDiv.style.color = "green";
+        msgDiv.textContent = "Message submitted (static demo)";
+        msgDiv.style.display = "block";
+        setTimeout(()=>{msgDiv.style.display="none";},6000);
+    });
+    </script>
+
+    <script>
+
+let showMoreState = false;
+
+function toggleMoreBlogs(){
+
+    const hiddenBlogs = document.querySelectorAll(".hidden-blog");
+
+    if(!showMoreState){
+
+        hiddenBlogs.forEach(blog=>{
+            blog.style.display="block";
+        });
+
+        document.getElementById("show-more-btn").innerText = "Show Less Blogs";
+
+        showMoreState = true;
+
+    }
+    else{
+
+        hiddenBlogs.forEach(blog=>{
+            blog.style.display="none";
+        });
+
+        document.getElementById("show-more-btn").innerText = "Show More Blogs";
+
+        showMoreState = false;
+    }
+
+}
+
+</script>
+</body>
+</html>
