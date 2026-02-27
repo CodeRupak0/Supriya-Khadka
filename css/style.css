@@ -9,7 +9,10 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     height: 100vh; /* Full viewport height */
-    background-color: #f5f5f5;
+    background: radial-gradient(circle at center,
+    #f3e8ff 0%,
+    #fce8f1 75%,
+    #f5f5f5 100%);
 }
 
 /* LEFT SECTION (70%) */
@@ -74,10 +77,6 @@ nav ul li a:hover {
 .about-section{
     display: flex;
     min-height: 100vh;
-    background: radial-gradient(circle at center,
-    #f3e8ff 0%,
-    #fce8f1 45%,
-    #f5f5f5 100%);
     padding-bottom: 100px;
 }
 
@@ -149,7 +148,7 @@ nav ul li a:hover {
     padding-top: 10px;
     padding-bottom: 100px;
     padding-left: 200px;
-    background: #f5f5f5;
+
 }
 
 .portfolio-subheading {
@@ -262,7 +261,6 @@ nav ul li a:hover {
     padding-bottom: 100px;
     padding-left: 200px;
     padding-right: 200px;
-    background:#f5f5f5;
 }
 
 .blog-subheading{
