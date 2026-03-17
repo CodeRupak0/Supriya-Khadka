@@ -781,7 +781,7 @@ nav ul li a:hover {
 
 .footer-col {
     flex: 1;
-    min-width: 50px;
+    min-width: 250px;
 
 }
 
@@ -825,6 +825,7 @@ nav ul li a:hover {
 .footer-logo h3 {
     display: flex;
     align-items: center;
+    font-size: 24px;
 }
 
 .logo-balance {
