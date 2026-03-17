@@ -546,8 +546,61 @@ function toggleMoreBlogs(){
     }
 
 }
-
 </script>
 
+    <!-- ===== SCROLL FADE-IN ===== -->
+<script>
+(function () {
+
+  // Elements that fade UP (all sections except portfolio)
+  const selectors = [
+    '.about-content',
+    '.blog-subheading',
+    '.blog-heading',
+    '.blog-card',
+    '.show-more-wrapper',
+    '.contact-subheading',
+    '.contact-heading',
+    '.input-wrapper',
+    '.btn-send',
+  ];
+
+  // Add .fade-up to general elements
+  selectors.forEach(sel => {
+    document.querySelectorAll(sel).forEach(el => {
+      el.classList.add('fade-up');
+    });
+  });
+
+  // Portfolio LEFT — menu items + headings slide from left
+  document.querySelectorAll(
+    '.portfolio-subheading, .portfolio-heading, .menu-item'
+  ).forEach(el => el.classList.add('fade-left'));
+
+  // Portfolio RIGHT — content cards slide from right
+  document.querySelectorAll(
+    '.education-card, .experience-card, .research-card, .involvement-card'
+  ).forEach(el => el.classList.add('fade-right'));
+
+  // Observer — adds .visible when element enters viewport
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // fire once only
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  // Observe everything
+  document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => {
+    observer.observe(el);
+  });
+
+})();
+</script>
 </body>
 </html>
