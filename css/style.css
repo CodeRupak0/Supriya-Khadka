@@ -945,7 +945,7 @@ nav ul li a:hover {
 
 /* ================= RESPONSIVE — TABLET (1200px) ================= */
 
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
 
     .portfolio-section,
     .blog-section,
@@ -967,7 +967,7 @@ nav ul li a:hover {
 
 /* ================= RESPONSIVE — LARGE MOBILE (900px) ================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
     /* Nav */
     .nav-bar {
@@ -976,13 +976,12 @@ nav ul li a:hover {
     }
 
     nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     nav ul li {
