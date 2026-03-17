@@ -996,7 +996,7 @@ nav ul li a:hover {
     .about-section {
         flex-direction: column;
         padding-top: 90px;
-        padding-bottom: 60px;
+        padding-bottom: 30px;
     }
 
     .left-section {
@@ -1023,6 +1023,8 @@ nav ul li a:hover {
         margin: 0;
         font-size: 16px;
         text-align: justify;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     .right-section {
@@ -1042,7 +1044,8 @@ nav ul li a:hover {
     .portfolio-section {
         padding-left: 24px;
         padding-right: 24px;
-        padding-bottom: 60px;
+        padding-bottom: 40px;
+        padding-top: 10px;
     }
 
     .portfolio-subheading,
@@ -1061,6 +1064,7 @@ nav ul li a:hover {
         flex-direction: column;
         max-width: 100%;
         gap: 30px;
+        margin-bottom: 0;
     }
 
     .portfolio-menu {
@@ -1078,12 +1082,20 @@ nav ul li a:hover {
         max-width: calc(50% - 10px);
     }
 
+    .menu-item:hover {
+        transform: none !important;
+        background: #1565c0;
+        box-shadow: 0 8px 20px rgba(30, 136, 229, 0.45);
+    }
+
     .portfolio-content {
         width: 100%;
+        min-height: 0;
     }
 
     /* Blog */
     .blog-section {
+        padding-top: 0;
         padding-left: 24px;
         padding-right: 24px;
         padding-bottom: 60px;
