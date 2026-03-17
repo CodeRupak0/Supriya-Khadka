@@ -976,7 +976,10 @@ nav ul li a:hover {
     }
 
     nav ul {
-        gap: 24px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 50px;
         flex-wrap: wrap;
         justify-content: center;
     }
