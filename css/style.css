@@ -1058,6 +1058,7 @@ nav ul li a:hover {
     .blog-heading,
     .contact-heading {
         font-size: 34px;
+        margin-bottom: 15px;
     }
 
     .portfolio-container {
