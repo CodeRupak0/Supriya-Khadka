@@ -945,7 +945,7 @@ nav ul li a:hover {
 
 /* ================= RESPONSIVE — TABLET (1200px) ================= */
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
 
     .portfolio-section,
     .blog-section,
@@ -967,7 +967,7 @@ nav ul li a:hover {
 
 /* ================= RESPONSIVE — LARGE MOBILE (900px) ================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     /* Nav */
     .nav-bar {
@@ -979,7 +979,7 @@ nav ul li a:hover {
         list-style: none;
         display: flex;
         align-items: center;
-        gap: 50px;
+        gap: 100px;
         flex-wrap: wrap;
         justify-content: center;
     }
