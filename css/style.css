@@ -145,6 +145,10 @@ nav ul li a:hover {
     object-fit: cover;
     border-radius: 30px;
     backdrop-filter: blur(10px);
+    box-shadow:
+        0 20px 60px rgba(0, 31, 63, 0.25),
+        0 8px 24px rgba(0, 95, 159, 0.15),
+        0 0 0 1px rgba(0, 95, 159, 0.08);
 }
 
 /* ================= PORTFOLIO SECTION ================= */
@@ -199,14 +203,15 @@ nav ul li a:hover {
     padding: 18px 25px;
     border-radius: 12px;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: transform 0.002s ease, background 0.002s ease;
     font-weight: 500;
     font-size: 20px;
     text-align: center;
 }
 
 .menu-item:hover {
-    transform: translateX(10px);
+    transform: translateX(15px) !important;
+    background: #1565c0;
 }
 
 .menu-item.active {
@@ -225,6 +230,21 @@ nav ul li a:hover {
 
 .content-box.active {
     display: block;
+}
+
+.education-card h3 {
+    display: inline;
+}
+
+
+.edu-year {
+    display: inline;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-left: 4px;       /* small gap after title */
+    position: relative;      /* allows vertical shift */
+    top: -3px;               /* move upward (adjust as needed) */
+    vertical-align: baseline; /* aligns nicely with h3 baseline */
 }
 
 @keyframes fadeIn {
@@ -710,21 +730,53 @@ nav ul li a:hover {
 /* ================= FOOTER ================= */
 
 .custom-footer {
-    background: #e2e2e8;
+    background: linear-gradient(135deg, #0a1628 0%, #0d2347 50%, #0a1f3d 100%);
     padding: 60px 8% 30px;
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 50px;
 }
 
 .footer-col {
     flex: 1;
-    min-width: 250px;
+    min-width: 50px;
+
+}
+
+.footer-col:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-col:nth-child(2) {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding-left: 150px;
+}
+
+.footer-col:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: justify;
+    text-align: left;
+    padding-left: 200px;
+}
+
+.footer-col p,
+.footer-col h4,
+ .footer-col h3 {
+    color: #e8f1ff;
+    margin-bottom: 16px;
 }
 
 .footer-logo {
@@ -734,16 +786,22 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+.footer-logo h3 {
+    display: flex;
+    align-items: center;
+}
+
 .logo-balance {
     width: 42px;
     height: 42px;
-    background: #1f2937;
+    background: rgba(255,255,255,0.1);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #facc15;
     font-size: 18px;
+    margin-top: -15px;
 }
 
 .logo-balance:hover {
@@ -753,12 +811,12 @@ nav ul li a:hover {
 .footer-description {
     margin-bottom: 20px;
     line-height: 1.6;
-    color: #555;
+    color: rgba(232,241,255,0.65);
 }
 
 .footer-info {
     margin-bottom: 10px;
-    color: #555;
+    color: rgba(232,241,255,0.65);
 }
 
 .footer-info i {
@@ -776,39 +834,68 @@ nav ul li a:hover {
 
 .footer-links a {
     text-decoration: none;
-    color: #444;
+    color: #e8f1ff;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #3023ae;
+    color: #1e88e5;
 }
 
 .social-icons {
     margin-top: 15px;
+    display: flex;
+    gap: 12px;
 }
 
 .social-icons a {
-    font-size: 18px;
-    margin-right: 15px;
-    color: #444;
-    transition: transform 0.3s ease, color 0.3s ease;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: rgba(232,241,255,0.75);
+    transition: transform 0.3s ease, color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
 }
 
-.social-icons a:hover {
-    color: #3023ae;
-    transform: translateY(-3px);
+/* Facebook — blue */
+.social-icons a:nth-child(1):hover {
+    color: #fff;
+    background: #1877f2;
+    border-color: #1877f2;
+    transform: translateY(-2px);
+}
+
+/* Instagram — red/pink */
+.social-icons a:nth-child(2):hover {
+    color: #fff;
+    background: #e1306c;
+    border-color: #e1306c;
+    transform: translateY(-2px);
+}
+
+/* LinkedIn — sky blue */
+.social-icons a:nth-child(3):hover {
+    color: #fff;
+    background: #0a66c2;
+    border-color: #0a66c2;
+    transform: translateY(-2px);
 }
 
 .footer-bottom {
     margin-top: 50px;
     padding-top: 20px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid rgba(255,255,255,0.08);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     font-size: 14px;
-    color: #777;
+    color: rgba(232,241,255,0.4);
 }
 
 /* ================= SCROLL FADE-IN ANIMATIONS ================= */
