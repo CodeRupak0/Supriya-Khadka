@@ -968,7 +968,7 @@ nav ul li a:hover {
 
 /* ================= RESPONSIVE — LARGE MOBILE (900px) ================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     /* Nav */
     .nav-bar {
@@ -1021,7 +1021,7 @@ nav ul li a:hover {
     .description {
         margin: 0;
         font-size: 16px;
-        text-align: center;
+        text-align: justify;
     }
 
     .right-section {
