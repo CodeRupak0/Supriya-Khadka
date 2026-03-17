@@ -24,22 +24,24 @@
 </head>
 
 <body>
+    <section class="nav-bar">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+
     <section class="about-section">
         <div class="left-section">
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-
             <div id= "about" class="about-content">
                 <p class="small-title">Attorney, Government of Nepal</p>
-                <h1 class="name">Adv. Supriya Khadka</h1>
+                <h1 class="name"><span class="gradient-text">Adv. Supriya Khadka</span></h1>
                 <p class="description">
-                    Hi, I am Adv. Supriya Khadka, an attorney at
+                    Hi, I am Supriya Khadka, an attorney at
                     the Government of Nepal, committed to justice advocacy,
                     legal research, and professional legal service with integrity
                     and dedication. I specialize in applying legal knowledge to
@@ -60,7 +62,7 @@
 
     <section id="portfolio" class="portfolio-section">
             <p class="portfolio-subheading">Know Me Better</p>
-            <h1 class="portfolio-heading">Brief Overview</h1>
+            <h1 class="portfolio-heading">Brief <span class="gradient-text">Overview</span></h1>
 
             <div class="portfolio-container">
 
@@ -155,66 +157,76 @@
 <!-- ================= BLOG SECTION ================= -->
 <section id="blog" class="blog-section">
   <p class="blog-subheading">Scribbles</p>
-  <h1 class="blog-heading">Between Thoughts and Words</h1>
+  <h1 class="blog-heading">Between <span class="gradient-text">Thoughts & Words </span></h1>
 
   <div class="blog-container">
 
-    <!-- ================= FEATURED HORIZONTAL BLOG ================= -->
+    <!-- ===== FEATURED HORIZONTAL CARD ===== -->
     <div class="blog-card horizontal" onclick="openBlog('blog1')">
-      <div class="blog-img-wrapper hz-img">
-        <img src="images/profile.jpg" class="blog-img-hz">
-        <div class="hover-overlay">
-          <div class="read-btn">View full article</div>
+        <div class="blog-card-inner">
+            <div class="blog-img-wrapper hz-img">
+              <img src="images/blog1.jpg" class="blog-img-hz">
+              <div class="hover-overlay">
+                <div class="read-btn">View full article</div>
+              </div>
+            </div>
+            <div class="blog-content" id="featured-content">
+              <h2 id="featured-title"></h2>
+              <p class="blog-date" id="featured-date"></p>
+              <p class="blog-text" id="featured-text"></p>
+              <p class="blog-author" id="featured-author"></p>
+            </div>
         </div>
-      </div>
-      <div class="blog-content" id="featured-content">
-        <h2 id="featured-title"></h2>
-        <p class="blog-date" id="featured-date"></p>
-        <p class="blog-text" id="featured-text"></p>
-        <p class="blog-author" id="featured-author"></p>
-      </div>
     </div>
 
-    <!-- ================= 3 COLUMN VERTICAL BLOG GRID ================= -->
+    <!-- ===== 3 COLUMN VERTICAL GRID ===== -->
     <div class="blog-grid">
 
       <div class="blog-card" onclick="openBlog('blog2')">
-        <div class="blog-img-wrapper">
-          <img src="images/blog2.jpg">
-          <div class="hover-overlay"><div class="read-btn">View full article</div></div>
-        </div>
-        <div class="blog-content">
-          <h3 id="card2-title"></h3>
-          <p class="blog-date" id="card2-date"></p>
-          <p class="blog-text" id="card2-text"></p>
-          <p class="blog-author"></p>
+        <div class="blog-card-inner">
+          <div class="blog-img-wrapper">
+            <img src="images/blog2.jpg">
+            <div class="hover-overlay"><div class="read-btn">View full article</div></div>
+          </div>
+          <div class="blog-content">
+            <h3 id="card2-title"></h3>
+            <p class="blog-date" id="card2-date"></p>
+            <p class="blog-text" id="card2-text"></p>
+            <p class="blog-author"></p>
+          </div>
         </div>
       </div>
 
       <div class="blog-card" onclick="openBlog('blog3')">
-        <div class="blog-img-wrapper">
-          <img src="images/blog3.jpg">
-          <div class="hover-overlay"><div class="read-btn">View full article</div></div>
+        <div class="blog-card-inner">
+          <div class="blog-img-wrapper">
+            <img src="images/blog3.jpg">
+            <div class="hover-overlay"><div class="read-btn">View full article</div></div>
+          </div>
+          <div class="blog-content">
+            <h3 id="card3-title"></h3>
+            <p class="blog-date" id="card3-date"></p>
+            <p class="blog-text" id="card3-text"></p>
+            <p class="blog-author">— </p>
+          </div>
         </div>
-        <div class="blog-content">
-          <h3 id="card3-title"></h3>
-          <p class="blog-date" id="card3-date"></p>
-          <p class="blog-text" id="card3-text"></p>
-          <p class="blog-author">— </p>
+      </div>
+        <!-- hidden blog content -->
+      <div class="blog-card hidden-blog" onclick="openBlog('blog5')">
+        <div class="blog-card-inner">
+          <!-- add content here -->
         </div>
       </div>
 
-      <!-- Hidden blogs (add more as needed) -->
-      <div class="blog-card hidden-blog" onclick="openBlog('blog5')">
-        <!-- Hidden blogs (add content here as needed) -->
-      </div>
     </div>
   </div>
-    <div class="show-more-wrapper">
+
+  <div class="show-more-wrapper">
         <button class="show-more-btn" id="show-more-btn" onclick="toggleMoreBlogs()">
-            Show More Blogs
+          Show More Blogs
         </button>
-      </div>
+  </div>
+
 </section>
 
 <!-- ================= FULLSCREEN BLOG MODAL ================= -->
@@ -234,22 +246,40 @@
     <!-- CONTACT -->
     <div id="contact" class="section contact-section">
         <p class="contact-subheading">Lets Connect!!</p>
-        <h1 class="contact-heading">Share Me Your Thoughts</h1>
+        <h1 class="contact-heading">Share Me <span class="gradient-text">Your Thoughts</span></h1>
         <form id="contactForm" class="contact-form">
-            <div class="form-group">
-                <input type="text" name="name" id="name" placeholder="Your full name" required>
+
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="text" name="name" id="name"
+                     placeholder="Your full name" required>
             </div>
-            <div class="form-group">
-                <input type="email" name="email" id="email" placeholder="Your email" required>
+          </div>
+
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="email" name="email" id="email"
+                     placeholder="Your email" required>
             </div>
-            <div class="form-group">
-                <input type="text" name="subject" id="subject" placeholder="Subject" required>
+          </div>
+
+          <div class="form-group">
+            <div class="input-wrapper">
+              <input type="text" name="subject" id="subject"
+                     placeholder="Subject" required>
             </div>
-            <div class="form-group">
-                <textarea name="message" id="message" rows="7" placeholder="Your message..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <div class="input-wrapper">
+              <textarea name="message" id="message"
+                        rows="7" placeholder="Your message..." required></textarea>
             </div>
-            <button type="submit" class="btn-send">Send Message</button>
-            <div id="contact-message" style="display:none; margin-top: 10px;"></div>
+          </div>
+
+          <button type="submit" class="btn-send">Send Message</button>
+          <div id="contact-message" style="display:none; margin-top:10px;"></div>
+
         </form>
     </div>
 
@@ -317,7 +347,7 @@
 <script>
 // ─── CONFIG: map each blog ID to its .txt file and image ───────────────────────
 const blogFiles = {
-  blog1: { txt: 'blog/blog1.txt', img: 'images/profile.jpg' },
+  blog1: { txt: 'blog/blog1.txt', img: 'images/blog1.jpg' },
   blog2: { txt: 'blog/blog2.txt', img: 'images/blog2.jpg' },
   blog3: { txt: 'blog/blog3.txt', img: 'images/blog3.jpg' },
   blog4: { txt: 'blog/blog4.txt', img: 'images/blog4.jpg' },
@@ -376,33 +406,42 @@ async function populateCards() {
 
 // ─── OPEN BLOG MODAL ─────────────────────────────────────────────────────────
 async function openBlog(id) {
-  id = id.replace(/\.txt$/, '');
-  const data = await parseTxt(id);
-  if (!data) { console.warn('Blog not found:', id); return; }
+    id = id.replace(/\.txt$/, '');
+    const data = await parseTxt(id);
+    if (!data) { console.warn('Blog not found:', id); return; }
 
-  document.getElementById('modal-img').src            = data.img;
-  document.getElementById('modal-img').alt            = data.title;
-  document.getElementById('modal-title').textContent  = data.title;
-  document.getElementById('modal-date').textContent   = data.date;
-  document.getElementById('modal-author').textContent = data.author;
+    document.getElementById('modal-img').src            = data.img;
+    document.getElementById('modal-img').alt            = data.title;
+    document.getElementById('modal-title').textContent  = data.title;
+    document.getElementById('modal-date').textContent   = data.date;
+    document.getElementById('modal-author').textContent = data.author;
 
-  const textEl = document.getElementById('modal-text');
-  textEl.innerHTML = data.body
-    .split(/\n\n+/)
-    .map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`)
-    .join('');
+    const textEl = document.getElementById('modal-text');
+    textEl.innerHTML = data.body
+        .split(/\n\n+/)
+        .map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`)
+        .join('');
 
-  history.pushState({ blog: id }, '', `?blog=${id}`);
-  document.getElementById('blog-modal').style.display = 'flex';
-  document.body.style.overflow = 'hidden';
+    history.pushState({ blog: id }, '', `?blog=${id}`);
+
+    // Show the modal
+    const modal = document.getElementById('blog-modal');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    // HIDE the nav only when modal is open
+    document.querySelector('.nav-bar').style.display = 'none';
 }
 
 function closeBlog() {
-  document.getElementById('blog-modal').style.display = 'none';
-  document.body.style.overflow = '';
-  history.pushState({}, '', window.location.pathname);
-}
+    const modal = document.getElementById('blog-modal');
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+    history.pushState({}, '', window.location.pathname);
 
+    // SHOW nav again
+    document.querySelector('.nav-bar').style.display = 'flex';
+}
 // ─── SHARE LINK ──────────────────────────────────────────────────────────────
 function shareBlog() {
   navigator.clipboard.writeText(window.location.href).then(() => {
@@ -509,5 +548,6 @@ function toggleMoreBlogs(){
 }
 
 </script>
+
 </body>
 </html>
