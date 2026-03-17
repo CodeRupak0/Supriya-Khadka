@@ -1072,8 +1072,8 @@ nav ul li a:hover {
     .menu-item {
         font-size: 16px;
         padding: 12px 18px;
-        flex: 1 1 120px;
-        max-width: 160px;
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
     }
 
     .menu-item:hover {
