@@ -11,7 +11,7 @@ html {
 }
 /* Body Layout */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Libre Baskerville', serif;
     height: 100vh;
     background: radial-gradient(circle at center,
         #e8f1ff 0%,
@@ -221,6 +221,7 @@ nav ul li a:hover {
 .portfolio-content {
     width: 60%;
     min-height: 300px;
+    font-size: 15px;
 }
 
 .content-box {
@@ -741,6 +742,8 @@ nav ul li a:hover {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 50px;
+    font-size: 14px;
+    font-weight: 200px;
 }
 
 .footer-col {
