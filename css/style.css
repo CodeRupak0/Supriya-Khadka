@@ -514,10 +514,43 @@ nav ul li a:hover {
     position: relative;
 }
 
+#modal-title {
+    color: #0d47a1;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: justify;
+}
+
+#modal-date {
+    color: #1e88e5;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
 #modal-text p {
     text-align: justify;
     line-height: 1.8;
     margin-bottom: 15px;
+}
+
+#modal-tags {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.modal-tag {
+    color: #1877f2;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-tag:hover {
+    color: #0d47a1;
 }
 
 .modal-content img {

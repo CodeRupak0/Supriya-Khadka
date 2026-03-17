@@ -216,7 +216,7 @@
         </div>
       </div>
         <!-- hidden blog content -->
-      <div class="blog-card hidden-blog" onclick="openBlog('blog5')">
+      <div class="blog-card hidden-blog" onclick="openBlog('blog4')">
         <div class="blog-card-inner">
           <!-- add content here -->
         </div>
@@ -242,6 +242,7 @@
     <p id="modal-date"></p>
     <div id="modal-text"></div>
     <p id="modal-author"></p>
+    <div id="modal-tags"></div>
 
   </div>
 </div>
@@ -380,6 +381,7 @@ async function parseTxt(id) {
       title:  get('Title'),
       date:   get('Date'),
       author: get('Author'),
+      tags:   get('Hashtags'),   // ← reads Hashtags: line
       body,
       img: file.img
     };
@@ -425,6 +427,20 @@ async function openBlog(id) {
         .split(/\n\n+/)
         .map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`)
         .join('');
+
+    // ─── RENDER HASHTAGS ─────────────────────────────────────────────────────
+    const tagsEl = document.getElementById('modal-tags');
+    tagsEl.innerHTML = '';
+    if (data.tags) {
+        data.tags.split(' ')
+            .filter(t => t.startsWith('#'))
+            .forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'modal-tag';
+                span.textContent = tag;
+                tagsEl.appendChild(span);
+            });
+    }
 
     history.pushState({ blog: id }, '', `?blog=${id}`);
 
@@ -472,10 +488,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   const blogId = params.get('blog');
   if (blogId) openBlog(blogId);
-});
-
-document.getElementById('blog-modal').addEventListener('click', function(e) {
-  if (e.target === this) closeBlog();
 });
 
 document.addEventListener('keydown', e => {
