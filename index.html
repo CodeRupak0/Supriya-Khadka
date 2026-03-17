@@ -443,6 +443,7 @@ function closeBlog() {
     // SHOW nav again
     document.querySelector('.nav-bar').style.display = 'flex';
 }
+
 // ─── SHARE LINK ──────────────────────────────────────────────────────────────
 function shareBlog() {
   navigator.clipboard.writeText(window.location.href).then(() => {
@@ -502,21 +503,6 @@ document.addEventListener('keydown', e => {
     </script>
 
     <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e){
-        e.preventDefault();
-        const form = e.target;
-        const formData = new FormData(form);
-        // Replace with your backend endpoint if any
-        console.log("Form submitted:", Object.fromEntries(formData.entries()));
-        const msgDiv = document.getElementById("contact-message");
-        msgDiv.style.color = "green";
-        msgDiv.textContent = "Message submitted (static demo)";
-        msgDiv.style.display = "block";
-        setTimeout(()=>{msgDiv.style.display="none";},6000);
-    });
-    </script>
-
-    <script>
 
 let showMoreState = false;
 
@@ -549,59 +535,103 @@ function toggleMoreBlogs(){
 }
 </script>
 
+    <!-- ===== EMAILJS SDK ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      emailjs.init('I6i88o5hPfzXWSAji'); // ← replace with your EmailJS public key
+    </script>
+
+    <!-- ===== CONTACT FORM — EmailJS ===== -->
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const btn    = document.querySelector('.btn-send');
+        const msgDiv = document.getElementById('contact-message');
+
+        // Loading state
+        btn.textContent = 'Sending...';
+        btn.disabled    = true;
+
+        emailjs.sendForm(
+            'service_lxaxx1m',   // ← replace with your EmailJS service ID
+            'template_du20t6d',  // ← replace with your EmailJS template ID
+            this
+        )
+        .then(() => {
+            msgDiv.className   = 'success';
+            msgDiv.textContent = '✓ Message sent successfully!';
+            msgDiv.style.display = 'block';
+            this.reset();
+            btn.textContent = 'Send Message';
+            btn.disabled    = false;
+            setTimeout(() => { msgDiv.style.display = 'none'; }, 5000);
+        })
+        .catch((err) => {
+            console.error('EmailJS error:', err);
+            msgDiv.className   = 'error';
+            msgDiv.textContent = '✗ Something went wrong. Please try again.';
+            msgDiv.style.display = 'block';
+            btn.textContent = 'Send Message';
+            btn.disabled    = false;
+        });
+    });
+    </script>
+
     <!-- ===== SCROLL FADE-IN ===== -->
-<script>
-(function () {
+    <script>
+    (function () {
 
-  // Elements that fade UP (all sections except portfolio)
-  const selectors = [
-    '.about-content',
-    '.blog-subheading',
-    '.blog-heading',
-    '.blog-card',
-    '.show-more-wrapper',
-    '.contact-subheading',
-    '.contact-heading',
-    '.input-wrapper',
-    '.btn-send',
-  ];
+      // Elements that fade UP (all sections except portfolio)
+      const selectors = [
+        '.about-content',
+        '.blog-subheading',
+        '.blog-heading',
+        '.blog-card',
+        '.show-more-wrapper',
+        '.contact-subheading',
+        '.contact-heading',
+        '.input-wrapper',
+        '.btn-send',
+      ];
 
-  // Add .fade-up to general elements
-  selectors.forEach(sel => {
-    document.querySelectorAll(sel).forEach(el => {
-      el.classList.add('fade-up');
-    });
-  });
+      // Add .fade-up to general elements
+      selectors.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => {
+          el.classList.add('fade-up');
+        });
+      });
 
-  // Portfolio LEFT — menu items + headings slide from left
-  document.querySelectorAll(
-    '.portfolio-subheading, .portfolio-heading, .menu-item'
-  ).forEach(el => el.classList.add('fade-left'));
+      // Portfolio LEFT — menu items + headings slide from left
+      document.querySelectorAll(
+        '.portfolio-subheading, .portfolio-heading, .menu-item'
+      ).forEach(el => el.classList.add('fade-left'));
 
-  // Portfolio RIGHT — content cards slide from right
-  document.querySelectorAll(
-    '.education-card, .experience-card, .research-card, .involvement-card'
-  ).forEach(el => el.classList.add('fade-right'));
+      // Portfolio RIGHT — content cards slide from right
+      document.querySelectorAll(
+        '.education-card, .experience-card, .research-card, .involvement-card'
+      ).forEach(el => el.classList.add('fade-right'));
 
-  // Observer — adds .visible when element enters viewport
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // fire once only
-      }
-    });
-  }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
-  });
+      // Observer — adds .visible when element enters viewport
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // fire once only
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
 
-  // Observe everything
-  document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => {
-    observer.observe(el);
-  });
+      // Observe everything
+      document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => {
+        observer.observe(el);
+      });
 
-})();
-</script>
+    })();
+    </script>
+
 </body>
 </html>
