@@ -1092,6 +1092,7 @@ nav ul li a:hover {
     .portfolio-content {
         width: 100%;
         min-height: 0;
+        padding-left: 40px;
     }
 
     /* Blog */
