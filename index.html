@@ -196,7 +196,7 @@
             <h3 id="card2-title"></h3>
             <p class="blog-date" id="card2-date"></p>
             <p class="blog-text" id="card2-text"></p>
-            <p class="blog-author"></p>
+            <p class="blog-author" id="card2-author"></p>
           </div>
         </div>
       </div>
@@ -211,7 +211,7 @@
             <h3 id="card3-title"></h3>
             <p class="blog-date" id="card3-date"></p>
             <p class="blog-text" id="card3-text"></p>
-            <p class="blog-author">— </p>
+            <p class="blog-author" id="card3-author">— </p>
           </div>
         </div>
       </div>
@@ -391,10 +391,10 @@ async function parseTxt(id) {
 // ─── CARD MAP ─────────────────────────────────────────────────────────────────
 const cardMap = {
   blog1: { title: 'featured-title', date: 'featured-date', text: 'featured-text', author: 'featured-author' },
-  blog2: { title: 'card2-title',    date: 'card2-date',    text: 'card2-text' },
-  blog3: { title: 'card3-title',    date: 'card3-date',    text: 'card3-text' },
-  blog4: { title: 'card4-title',    date: 'card4-date',    text: 'card4-text' },
-  blog5: { title: 'card5-title',    date: 'card5-date',    text: 'card5-text' },
+  blog2: { title: 'card2-title',    date: 'card2-date',    text: 'card2-text', author: 'card2-author' },
+  blog3: { title: 'card3-title',    date: 'card3-date',    text: 'card3-text', author: 'card3-author' },
+  blog4: { title: 'card4-title',    date: 'card4-date',    text: 'card4-text', author: 'card4-author' },
+  blog5: { title: 'card5-title',    date: 'card5-date',    text: 'card5-text', author: 'card5-author' },
 };
 
 async function populateCards() {
