@@ -973,6 +973,7 @@ nav ul li a:hover {
     .nav-bar {
         padding: 12px 24px;
         padding-left: 24px;
+        justify-content: center;
     }
 
     nav ul {
