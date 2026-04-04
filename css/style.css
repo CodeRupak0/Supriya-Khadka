@@ -394,7 +394,6 @@ nav ul li a:hover {
 
 .blog-img-wrapper.hz-img {
     height: 100%; /* 👈 bigger height for featured */
-    min-height: 380px;   /* ensures visibility */
 }
 
 .blog-card.horizontal {
@@ -403,7 +402,6 @@ nav ul li a:hover {
 
 .blog-card.horizontal .blog-img-wrapper.hz-img {
     flex: 0 0 45%;
-    height: 320px;       /* 👈 KEY FIX */
 }
 
 /* Hover overlay */
