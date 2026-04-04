@@ -393,7 +393,7 @@ nav ul li a:hover {
 }
 
 .blog-img-wrapper.hz-img {
-    height: 100%; /* 👈 bigger height for featured */
+    height: 105%; /* 👈 bigger height for featured */
 }
 
 /* Hover overlay */
